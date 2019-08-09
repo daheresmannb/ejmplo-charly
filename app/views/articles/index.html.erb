@@ -2,6 +2,7 @@
 <div style="margin-bottom: 15px;">
 	<%= link_to 'New article', new_article_path %>
 </div>
+<div>boring old rails table ...</div>
 <div>
 	<table>
 	  <tr>
@@ -23,3 +24,27 @@
 	  <% end %>
 	</table>
 </div>
+
+</br>
+<div>should be replaced with table using Vue, but something seems to not work right ...</div>
+<%= content_tag :div,
+  id: "articles-vue",
+  data: {
+    apiurl: articles_url,
+  } do %>
+		<table>
+		  <tr>
+		    <th>Title</th>
+		    <th>Text</th>
+		    <th colspan="3"></th>
+		  </tr>
+	    <tr v-for="article in articles">
+	      <td>{{ article.title }}</td>
+	      <td>{{ article.text }}</td>
+	    </tr>
+		</table>
+<% end %>
+
+<% content_for :head do -%> 
+  <%= javascript_pack_tag 'articles_vue' %>
+<% end %>
