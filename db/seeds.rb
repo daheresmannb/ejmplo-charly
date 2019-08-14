@@ -12,3 +12,8 @@ article = Article.create_with(text: "Este es el texto de prueba del articulo").f
 
 article.comments.create_with(body: "Este es un nuevo comentario").find_or_create_by(commenter: "Pedro")
 article.comments.create_with(body: "Este es otro comentario").find_or_create_by(commenter: "Juan")
+
+User.create([{
+	username: "danielheresmann",
+	password: "123456"
+}])
