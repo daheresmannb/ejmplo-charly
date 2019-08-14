@@ -36,25 +36,14 @@ rails db:seed
 
 ## Tasks
 
-### 1. Fix articles index. 
-Remove existing rails table and fix table in vue.
 
-### 2. Show comments in table
-a) show comments for all articles in table
-b) only show articles with existing comments
-c) toggle comments shown on/off
 
-### 3. Create RESTful API that
-a) returns all articles
-b) returns all comments for specified article
-c) authorizes using a token
+lo que alcance a hacer fue una api rest 
 
-### 4. Write tests which assert that
-a) Article validates presence of title
-b) the same commenter can only comment each article once
-c) ArticlesController index action called as json returns array
-c) <table> element present in DOM of article index 
-
-### 5. Implement "New Article" using vue
-submit new article form to rails api, create new article and show created article in table without necesity to leave articles index.
+- tabla users 
+- modelo User
+- controlador User
+- controlador de authenticacion
+- rutas para login y crud de usuario
+- seeder con mi usuario y password
 
